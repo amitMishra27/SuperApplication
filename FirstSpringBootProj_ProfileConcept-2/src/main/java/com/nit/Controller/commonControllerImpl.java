@@ -1,8 +1,11 @@
 package com.nit.Controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
+import com.nit.Beans.Employee;
 import com.nit.Service.commonServiceClass;
 
 @Controller("cntrl")
@@ -11,11 +14,9 @@ public class commonControllerImpl {
 	@Autowired
 	private commonServiceClass cserivce;
 	
-	public int getResults()
+	public List<Employee> getResults()
 	{
-		int i=cserivce.getSearchResult();
-		
-		return i;
+		return cserivce.getSearchResult();
 	}
 
 }

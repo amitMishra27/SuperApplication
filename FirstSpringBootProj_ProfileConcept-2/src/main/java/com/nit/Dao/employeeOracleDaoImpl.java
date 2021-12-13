@@ -22,8 +22,9 @@ public class employeeOracleDaoImpl implements IEmployeeDao {
 	@Autowired
 	private DataSource ds;
 	
-	public int getSearchResult()
+	public List<Employee> getSearchResult()
 	{
+		List<Employee> empList=new ArrayList<Employee>();
 		try {
 		// TODO Auto-generated method stub
 				Connection conn=ds.getConnection();
@@ -36,7 +37,7 @@ public class employeeOracleDaoImpl implements IEmployeeDao {
 				
 				ResultSet rs=ps.executeQuery();
 				 
-				List<Employee> empList=new ArrayList<Employee>();
+				
 				
 				while(rs.next())
 				{
@@ -55,7 +56,7 @@ public class employeeOracleDaoImpl implements IEmployeeDao {
 	{
 		ex.printStackTrace();
 	}
-		return 1;
+		return empList;
 		
 	}
 
