@@ -30,7 +30,7 @@ public class employeeOracleDaoImpl implements IEmployeeDao {
 				Connection conn=ds.getConnection();
 				
 				PreparedStatement ps=conn.prepareStatement("select empno,em"
-						+ "pname,empsal,empjob from employee_oracle ");
+						+ "pname,empsal,empdesg from employee_oracle ");
 			
 				
 				System.out.println("===="+ps.toString());
