@@ -9,7 +9,7 @@ public class Employee {
 	
 	private String empname;
 	private String empjob;
-	private Float empsal;
+	private String empsal;
 	
 
 }

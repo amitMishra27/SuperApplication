@@ -13,7 +13,7 @@ public class FirstSpringBootProjProfileConcept2Application {
 		ApplicationContext ctx=SpringApplication.run(FirstSpringBootProjProfileConcept2Application.class, args);
 		commonControllerImpl ct=ctx.getBean("cntrl", commonControllerImpl.class);
 		System.out.println(ct.getResults());
-		System.out.println(ct.getResults());
+		
 	}
 
 }

@@ -29,22 +29,23 @@ public class employeeOracleDaoImpl implements IEmployeeDao {
 		// TODO Auto-generated method stub
 				Connection conn=ds.getConnection();
 				
-				PreparedStatement ps=conn.prepareStatement("select empno,em"
-						+ "pname,empsal,empdesg from employee_oracle ");
+PreparedStatement ps=conn.prepareStatement("select empno,empname,empsal,empdesg from employee_oracle ");
 			
 				
 				System.out.println("===="+ps.toString());
 				
 				ResultSet rs=ps.executeQuery();
+				System.out.println("============="+rs.next());
 				 
 				
 				
 				while(rs.next())
 				{
+					
 					Employee e=new Employee();
 					e.setEmpno(rs.getInt(1));
 					e.setEmpname(rs.getString(2));
-					e.setEmpsal(rs.getFloat(3));
+					e.setEmpsal(rs.getString(3));
 					e.setEmpjob(rs.getString(4));
 					empList.add(e);
 					

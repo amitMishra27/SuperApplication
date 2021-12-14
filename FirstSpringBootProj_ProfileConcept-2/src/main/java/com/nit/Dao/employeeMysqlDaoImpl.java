@@ -45,7 +45,7 @@ public class employeeMysqlDaoImpl implements IEmployeeDao {
 						Employee e=new Employee();
 						e.setEmpno(rs.getInt(1));
 						e.setEmpname(rs.getString(2));
-						e.setEmpsal(rs.getFloat(3));
+						e.setEmpsal(rs.getString(3));
 						e.setEmpjob(rs.getString(4));
 						empList.add(e);
 						
