@@ -22,6 +22,7 @@ public interface empServiceInterf {
 		return new ResponseEntity<List<Employee>>(al,HttpStatus.OK);
 		
 	}
+	@RequestMapping("/getObjects")
 	default ResponseEntity<String> getObject()
 	{
 		return new ResponseEntity<String>("Dfault Method Executed",HttpStatus.OK);
